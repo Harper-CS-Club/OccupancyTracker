@@ -2,9 +2,12 @@
   "name": "occupancy-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx ts-node ./src/index.ts",
+    "startprod": "npm run build && node build/index.js",
+    "build": "rimraf ./build && tsc"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/Harper-CS-Club/OccupancyTracker/issues"
   },
-  "homepage": "https://github.com/Harper-CS-Club/OccupancyTracker#readme"
+  "homepage": "https://github.com/Harper-CS-Club/OccupancyTracker#readme",
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  }
 }
